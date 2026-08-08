@@ -1,0 +1,44 @@
+{
+  "students": [
+    {"id": 1, "name": "Alice Smith", "age": 22, "major": "Computer Science", "gpa": 3.8},
+    {"id": 2, "name": "Bob Johnson", "age": 19, "major": "Mathematics", "gpa": 3.2},
+    {"id": 3, "name": "Charlie Brown", "age": 21, "major": "Physics", "gpa": 3.5},
+    {"id": 4, "name": "Diana Prince", "age": 20, "major": "Engineering", "gpa": 3.9},
+    {"id": 5, "name": "Evan Wright", "age": 23, "major": "History", "gpa": 3.1}
+  ],
+  "employees": [
+    {"id": 101, "name": "John Doe", "department": "IT", "salary": 75000},
+    {"id": 102, "name": "Jane Roe", "department": "HR", "salary": 65000},
+    {"id": 103, "name": "Sam Smith", "department": "Finance", "salary": 80000},
+    {"id": 104, "name": "Anna Lee", "department": "Marketing", "salary": 72000},
+    {"id": 105, "name": "David Kim", "department": "IT", "salary": 85000}
+  ],
+  "products": [
+    {"id": 201, "name": "Laptop", "category": "Electronics", "price": 1200, "stock": 45},
+    {"id": 202, "name": "Mouse", "category": "Electronics", "price": 25, "stock": 150},
+    {"id": 203, "name": "Desk", "category": "Furniture", "price": 250, "stock": 20},
+    {"id": 204, "name": "Chair", "category": "Furniture", "price": 120, "stock": 50},
+    {"id": 205, "name": "Headphones", "category": "Electronics", "price": 100, "stock": 80}
+  ],
+  "orders": [
+    {"id": 301, "customer_id": 401, "product_id": 201, "quantity": 1, "order_date": "2024-03-01"},
+    {"id": 302, "customer_id": 402, "product_id": 202, "quantity": 2, "order_date": "2024-03-02"},
+    {"id": 303, "customer_id": 403, "product_id": 203, "quantity": 1, "order_date": "2024-03-03"},
+    {"id": 304, "customer_id": 401, "product_id": 205, "quantity": 3, "order_date": "2024-03-04"},
+    {"id": 305, "customer_id": 404, "product_id": 204, "quantity": 4, "order_date": "2024-03-05"}
+  ],
+  "customers": [
+    {"id": 401, "name": "Alice Wonderland", "email": "alice@email.com", "country": "USA"},
+    {"id": 402, "name": "Bob Builder", "email": "bob@email.com", "country": "UK"},
+    {"id": 403, "name": "Charlie Chocolate", "email": "charlie@email.com", "country": "Canada"},
+    {"id": 404, "name": "Diana Ross", "email": "diana@email.com", "country": "USA"},
+    {"id": 405, "name": "Evan Almighty", "email": "evan@email.com", "country": "Australia"}
+  ],
+  "books": [
+    {"id": 501, "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "genre": "Fiction", "year": 1925},
+    {"id": 502, "title": "1984", "author": "George Orwell", "genre": "Dystopian", "year": 1949},
+    {"id": 503, "title": "To Kill a Mockingbird", "author": "Harper Lee", "genre": "Fiction", "year": 1960},
+    {"id": 504, "title": "A Brief History of Time", "author": "Stephen Hawking", "genre": "Science", "year": 1988},
+    {"id": 505, "title": "Sapiens", "author": "Yuval Noah Harari", "genre": "History", "year": 2011}
+  ]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Academy - Voice2SQL</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="logo">🎙️ Voice2SQL</div>
+        <div class="nav-links">
+            <a href="index.html">Query System</a>
+            <a href="learn.html" class="active">SQL Academy</a>
+            <button id="themeToggle" class="btn-theme">☀️ Light</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="app-header glass-panel">
+            <h1>SQL Academy</h1>
+            <p>Learn database concepts visually with 3D animations and an interactive AI tutor.</p>
+        </header>
+
+        <section class="learning-grid">
+            <aside class="topics-sidebar glass-panel">
+                <h3 style="color: var(--accent-color); margin-bottom: 15px;">Topics</h3>
+                <ul class="topic-list" id="topicList">
+                    <li class="active" data-topic="Introduction to Databases">Introduction to Databases</li>
+                    <li data-topic="SELECT Statements">SELECT Statements</li>
+                    <li data-topic="WHERE Clauses">WHERE Clauses</li>
+                    <li data-topic="ORDER BY & LIMIT">ORDER BY & LIMIT</li>
+                    <li data-topic="INSERT Data">INSERT Data</li>
+                    <li data-topic="UPDATE Data">UPDATE Data</li>
+                    <li data-topic="DELETE Data">DELETE Data</li>
+                    <li data-topic="JOINs (Inner, Left, Right)">JOINs (Inner, Left, Right)</li>
+                    <li data-topic="GROUP BY & HAVING">GROUP BY & HAVING</li>
+                    <li data-topic="Aggregate Functions">Aggregate Functions</li>
+                    <li data-topic="Subqueries">Subqueries</li>
+                    <li data-topic="Indexes & Views">Indexes & Views</li>
+                    <li data-topic="Stored Procedures">Stored Procedures</li>
+                    <li data-topic="Query Optimization">Query Optimization</li>
+                </ul>
+            </aside>
+
+            <article class="lesson-content glass-panel">
+                <div class="card-3d">
+                    <div class="card-inner">
+                        <h2 class="lesson-title" id="currentLessonTitle">Lesson: Introduction to Databases</h2>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="learningProgress" style="width: 7%;"></div>
+                        </div>
+                        
+                        <div id="threejs-container" class="three-container">
+                            <!-- 3D Scene rendered here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-container">
+                    <h3 style="color: var(--accent-color);">AI Tutor</h3>
+                    <div class="chat-messages" id="chatMessages">
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chatInput" placeholder="Ask a question about this topic...">
+                        <button id="sendChatBtn" class="btn primary">Send</button>
+                    </div>
+                </div>
+
+                <div class="playground" style="margin-top: 20px;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 10px;">SQL Playground</h3>
+                    <textarea id="playgroundCode" placeholder="Write your SQL queries here... e.g., SELECT * FROM students;"></textarea>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <button id="runPlaygroundBtn" class="btn primary">Run Query</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="gemini.js"></script>
+    <script src="speech.js"></script>
+    <script src="three-animations.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

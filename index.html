@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTQF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to SQL Query System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="logo">🎙️ Voice2SQL</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Query System</a>
+            <a href="learn.html">SQL Academy</a>
+            <button id="themeToggle" class="btn-theme">☀️ Light</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="app-header glass-panel">
+            <h1>Speak Your Query</h1>
+            <p>Convert natural voice into SQL effortlessly.</p>
+        </header>
+
+        <section class="voice-section glass-panel">
+            <div class="microphone-container">
+                <button id="micBtn" class="mic-btn" aria-label="Start recording">
+                    🎤
+                </button>
+                <div class="mic-ring"></div>
+            </div>
+            <div class="status-indicator">
+                <span id="recordingStatus">Press the microphone to start speaking...</span>
+            </div>
+            
+            <div class="transcript-box">
+                <h3>Query Input:</h3>
+                <div style="display: flex; gap: 10px; margin-top: 10px; margin-bottom: 10px;">
+                    <input type="text" id="manualInput" placeholder="Speak, or type your query here..." style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid var(--panel-border); background: var(--bg-color); color: var(--text-primary); font-family: inherit; font-size: 1rem;">
+                    <button id="manualBtn" class="btn primary">Generate SQL</button>
+                </div>
+                <p id="transcriptText" class="placeholder" style="display:none;">Awaiting voice input...</p>
+            </div>
+        </section>
+
+        <section class="sql-section glass-panel">
+            <div class="sql-header">
+                <h3>Generated SQL Query:</h3>
+                <div class="actions">
+                    <button id="runQueryBtn" class="btn primary" disabled>▶ Run Query</button>
+                    <button id="speakQueryBtn" class="btn secondary" disabled>🔊 Read Query</button>
+                </div>
+            </div>
+            <div class="code-container">
+                <pre><code id="generatedSql">/* SQL will appear here */</code></pre>
+            </div>
+            <div class="sql-explanation">
+                <h4>AI Explanation:</h4>
+                <p id="sqlExplanation">Waiting for query generation...</p>
+            </div>
+        </section>
+
+        <section class="results-section glass-panel">
+            <h3>Query Results:</h3>
+            <div class="table-container" id="resultsContainer">
+                <p class="placeholder">Run a query to see results.</p>
+            </div>
+            <div class="speak-results">
+                <br>
+                <button id="speakResultsBtn" class="btn secondary" style="display:none;">🔊 Read Results</button>
+            </div>
+        </section>
+
+        <section class="history-section glass-panel">
+            <h3>Query History:</h3>
+            <ul id="historyList" class="history-list">
+                <!-- History items injected here -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <!-- Load config first, then modules depending on it -->
+    <script src="config.js"></script>
+    <script src="gemini.js"></script>
+    <script src="speech.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
